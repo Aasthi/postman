@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "ea3f3c6f-1763-42e7-a384-1fd9013fb9d7",
+		"name": "Airbnb API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "V1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{x-api-key}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/default/getIncomeHistory?coordinate=(40.729932,-73.989256)&bedrooms=2&bathrooms=2&apiResponseType=summary_monthly",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"default",
+						"getIncomeHistory"
+					],
+					"query": [
+						{
+							"key": "coordinate",
+							"value": "(40.729932,-73.989256)"
+						},
+						{
+							"key": "bedrooms",
+							"value": "2"
+						},
+						{
+							"key": "bathrooms",
+							"value": "2"
+						},
+						{
+							"key": "apiResponseType",
+							"value": "summary_monthly"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "V2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{x-api-key}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/v2/getIncomeHistory?coordinate=(40.729932,-73.989256)&bedrooms=2&bathrooms=2&apiResponseType=estimator_summary",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v2",
+						"getIncomeHistory"
+					],
+					"query": [
+						{
+							"key": "coordinate",
+							"value": "(40.729932,-73.989256)"
+						},
+						{
+							"key": "bedrooms",
+							"value": "2"
+						},
+						{
+							"key": "bathrooms",
+							"value": "2"
+						},
+						{
+							"key": "apiResponseType",
+							"value": "estimator_summary"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://7sdr27znoa.execute-api.us-east-2.amazonaws.com"
+		},
+		{
+			"key": "x-api-key",
+			"value": "LTiWL1iy86aYHKNgiQbHk1xXLKsBmK7d8Vk40biY"
+		},
+		{
+			"key": "authorization",
+			"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImphZSthYXN0aGlAYWlyYnRpY3MuY29tIn0.M2RvIYvZPKyXYAo7cAj-CwsMZNVsaYzg90qp-qvv_rA"
+		}
+	]
+}
